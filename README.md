@@ -1,5 +1,7 @@
 ## Website für DLBUXPWP01
 
+Eine kleine Lernwebseite über Trading Card Games.
+
 ## Trading Card Games
 
 - Legends of Runeterra (LoR)
