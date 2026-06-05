@@ -4,6 +4,7 @@
   --color-text: #1f2933;
   --color-border: #d4d4ce;
   --color-accent: #2f5d50;
+  --color-accent-dark: #24483e;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
@@ -29,6 +30,11 @@ a {
 a:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .site-header,
@@ -68,6 +74,68 @@ a:focus-visible {
   padding: var(--spacing-lg) 0;
 }
 
+.home-intro {
+  max-width: 800px;
+}
+
+.home-intro h1,
+.content-section h2 {
+  line-height: 1.2;
+}
+
+.content-section {
+  margin-top: 2rem;
+}
+
+.text-list {
+  padding-left: 1.25rem;
+}
+
+.text-list li + li {
+  margin-top: var(--spacing-md);
+}
+
+.game-grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: 1fr;
+  margin: var(--spacing-lg) 0 0;
+  padding: 0;
+}
+
+.game-grid li {
+  list-style: none;
+}
+
+.game-grid a {
+  display: flex;
+  min-height: 9rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-align: center;
+  text-decoration: none;
+}
+
+.game-grid a:hover {
+  border-color: var(--color-accent);
+}
+
+.game-grid img {
+  max-height: 5rem;
+  object-fit: contain;
+}
+
+.game-grid span {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+}
+
 .site-footer {
   border-top: 1px solid var(--color-border);
   border-bottom: 0;
@@ -79,5 +147,9 @@ a:focus-visible {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
