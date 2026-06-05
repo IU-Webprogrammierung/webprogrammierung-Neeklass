@@ -136,6 +136,22 @@ img {
   font-weight: 700;
 }
 
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.deck-grid figure {
+  margin: 0;
+}
+
+.deck-grid img {
+  width: 100%;
+  height: auto;
+}
+
 .site-footer {
   border-top: 1px solid var(--color-border);
   border-bottom: 0;
@@ -151,5 +167,9 @@ img {
 
   .game-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .deck-grid {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   }
 }
