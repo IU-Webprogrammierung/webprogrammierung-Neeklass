@@ -6,6 +6,14 @@ const navigation = [
   { href: "/mtg/", label: "Magic: The Gathering" },
   { href: "/legal/", label: "Impressum" }
 ];
+
+const currentPath = Astro.url.pathname;
+const decklistNavigation = {
+  "/ygo-decklist/": "/ygo/",
+  "/lor-decklist/": "/lor/",
+  "/mtg-decklist/": "/mtg/"
+};
+const activePath = decklistNavigation[currentPath] ?? currentPath;
 ---
 
 <header class="site-header">
@@ -16,7 +24,7 @@ const navigation = [
     <ul>
       {navigation.map((item) => (
         <li>
-          <a href={item.href}>{item.label}</a>
+          <a href={item.href} aria-current={item.href === activePath ? "page" : undefined}>{item.label}</a>
         </li>
       ))}
     </ul>
