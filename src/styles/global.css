@@ -1,14 +1,10 @@
 :root {
-  --color-background: #f7f7f4;
+  --color-background: #f5faf7;
   --color-surface: #ffffff;
-  --color-text: #1f2933;
-  --color-border: #d4d4ce;
-  --color-accent: #2f5d50;
-  --color-accent-dark: #24483e;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --content-width: 960px;
+  --color-text: #1d2b2f;
+  --color-border: #cadbd3;
+  --color-accent: #2f7d68;
+  --color-accent-dark: #22594a;
 }
 
 * {
@@ -46,20 +42,21 @@ img {
 .site-header {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.site-logo {
-  font-weight: 700;
-  text-decoration: none;
+.site-logo img {
+  display: block;
+  width: 64px;
+  height: 64px;
 }
 
 .site-nav ul,
 .site-footer nav {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm) var(--spacing-md);
+  gap: 0.5rem 1rem;
   margin: 0;
   padding: 0;
 }
@@ -68,10 +65,14 @@ img {
   list-style: none;
 }
 
+.site-footer nav {
+  justify-content: center;
+}
+
 .page-content {
-  width: min(100% - 2rem, var(--content-width));
+  width: min(100% - 2rem, 960px);
   margin: 0 auto;
-  padding: var(--spacing-lg) 0;
+  padding: 1.5rem 0;
 }
 
 .home-intro {
@@ -92,14 +93,14 @@ img {
 }
 
 .text-list li + li {
-  margin-top: var(--spacing-md);
+  margin-top: 1rem;
 }
 
 .game-grid {
   display: grid;
-  gap: var(--spacing-md);
+  gap: 1rem;
   grid-template-columns: 1fr;
-  margin: var(--spacing-lg) 0 0;
+  margin: 1.5rem 0 0;
   padding: 0;
 }
 
@@ -113,8 +114,8 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md);
+  gap: 0.5rem;
+  padding: 1rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   color: var(--color-text);
@@ -139,8 +140,8 @@ img {
 .deck-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .deck-grid figure {
@@ -155,7 +156,7 @@ img {
 .site-footer {
   border-top: 1px solid var(--color-border);
   border-bottom: 0;
-  padding: var(--spacing-md);
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
