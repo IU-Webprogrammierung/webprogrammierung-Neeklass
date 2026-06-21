@@ -1,23 +1,62 @@
-## Website für DLBUXPWP01
+# Einleitung
 
-Eine kleine Webseite zu meinem Trading-Card-Game-Hobby mit drei Spielbereichen und Decklisten.
+Dieses Repository enthält eine statische Website zum Thema Trading Card Games.
+Die Seite wurde für den Kurs `DLBUXPWP01` an der IU Internationale Hochschule erstellt.
 
-Kurs: DLBUXPWP01 (IU Internationale Hochschule)
+# Techstack
 
-LinkedIn: [LinkedIn](https://www.linkedin.com/in/niklasdittmann/)
+Mein Projekt basiert auf dem Web-Framework [Astro](https://astro.build/).
+Ich habe Astro gewählt, weil es komponentenbasiertes Arbeiten ermöglicht. Gleichzeitig kann ich weiterhin normale HTML-Syntax schreiben und CSS gezielt einsetzen.
 
-## Struktur
+> The `.astro` UI language is a superset of HTML: any valid HTML is valid Astro templating syntax! So, if you can write HTML, you can write Astro components!
 
-- `index.html` - Startseite
-- `src/` - HTML-Seiten für Spiele und Decklisten
-- `img/` - Bilder und Assets für die Spiele
-- `src/legal.html` - Impressum
+(siehe [Astro Docs](https://docs.astro.build/en/concepts/why-astro/#easy-to-use))
 
-## WCAG
+**Liste des Stacks:**
+- **Astro** ^5.0.0 als Framework
+- **HTML** für semantische Seitenstruktur
+- **CSS** für Styling, Layout und Responsiveness
+- **npm** als Paketmanager
+- **Node.js** als Laufzeitumgebung
 
-WCAG-relevante Elemente im Repo:
+Die zentrale Konfiguration befindet sich in `astro.config.mjs`.
+Dort ist `srcDir: "."` gesetzt.
+Dadurch verwendet Astro das Repository-Root als Quellverzeichnis, statt wie üblich einen separaten `src/`-Ordner zu erwarten.
 
-- HTML-Struktur und Überschriftenhierarchie in index.html und den Seiten unter src/
-- Linktexte und Navigation (Anker in index.html und den Dateien unter src/)
-- Bilder im Ordner img/ inklusive Alt-Texte auf den entsprechenden Seiten
-- Rechtliche Inhalte/Impressum unter src/legal.html (lesbare Struktur, klare Texte)
+# Struktur
+
+- `pages/index.astro`: Startseite mit Einführung zu TCGs und Navigation zu den drei Spielwelten
+- `pages/ygo.astro`, `pages/lor.astro`, `pages/mtg.astro`: Inhaltsseiten zu den einzelnen Spielen
+- `pages/*-decklist.astro`: Bildbasierte Decklisten
+- `components/Header.astro`: Hauptnavigation mit aktivem Navigationszustand
+- `components/Footer.astro`: Footer-Navigation
+- `styles/base.css`, `styles/components.css`, `styles/layout.css`: Farbvariablen, Grundlayout, Navigation, Kartenraster und responsive Decklisten
+- `pages/legal.astro`: Impressum, Marken-/Bildhinweise, Haftungsausschluss und Datenschutztext
+
+# Barrierefreiheit
+
+Bei der Umsetzung des Projekts wurde sich an die Richtlinien von W3C orientiert.
+([Web Content Accessibility Guidelines - WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/))
+
+# Entwicklung
+
+In `package.json` sind drei Skripte definiert:
+
+```json
+{
+  "dev": "astro dev",
+  "build": "astro build",
+  "preview": "astro preview"
+}
+```
+
+Skripte:
+
+- `npm run dev`: startet den lokalen Entwicklungsserver
+- `npm run build`: erzeugt den statischen Produktionsbuild
+- `npm run preview`: zeigt den gebauten Stand lokal an
+
+
+# Sonstiges
+
+[LinkedIn](https://www.linkedin.com/in/niklasdittmann/)

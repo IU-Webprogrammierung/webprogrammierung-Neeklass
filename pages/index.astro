@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ygoLogo from "../img/ygo/ygo_logo.webp";
+import lorLogo from "../img/lor/lor_logo.webp";
+import mtgLogo from "../img/mtg/mtg_logo.webp";
+---
+
+<BaseLayout title="TCG Übersicht - Startseite">
+  <section class="home-intro" aria-labelledby="startseite">
+    <h1 id="startseite">Niklas Dittmann: Meine Leidenschaft für TCGs</h1>
+    <p>
+      Mein Name ist Niklas Dittmann und bin seit der Grundschule ein
+      leidenschaftlicher Fan von Sammelkartenspielen (TCGs/CCGs). Was als
+      kindliche Faszination für bunte Karten und spannende Duelle begann, hat
+      sich über die Jahre zu einer strategischen und mathematischen Leidenschaft
+      entwickelt.
+    </p>
+
+    <section class="content-section" aria-labelledby="was-sind-tcgs">
+      <h2 id="was-sind-tcgs">Was sind TCGs/CCGs?</h2>
+      <p>
+        TCG steht für Trading Card Game (Sammelkartenspiel), CCG für Collectible
+        Card Game. Beide Begriffe werden oft synonym verwendet. Im Kern geht es
+        darum, dass Spieler individuell zusammengestellte Decks aus Karten
+        nutzen, um gegeneinander anzutreten.
+      </p>
+      <p>
+        Jede Karte hat einzigartige Fähigkeiten, Stärken und Schwächen. Der Reiz
+        liegt in der Kombination aus Glück und Strategie. Ein gutes Deck zu
+        bauen, die Karten clever einzusetzen und die Züge des Gegners
+        vorherzusehen. Das macht den Unterschied zwischen Sieg und Niederlage.
+      </p>
+      <p>
+        TCGs verbinden Taktik, Psychologie und oft auch eine Prise Mathematik.
+        Ob offline mit physischen Karten oder online in digitalen Welten, die
+        Faszination bleibt dieselbe.
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="warum-tcgs">
+      <h2 id="warum-tcgs">Warum TCGs?</h2>
+      <p>
+        TCGs haben mich von Anfang an begeistert, weil sie Strategie,
+        Kreativität und Präzision verbinden. Besonders fasziniert mich der
+        mathematische Aspekt dieser Spiele: die Berechnung von
+        Wahrscheinlichkeiten, das Optimieren von Decks und das präzise Timing
+        von Zügen.
+      </p>
+      <p>
+        Um meine Decks noch effizienter zu gestalten, nutze ich unter anderem
+        einen
+        <a
+          href="https://stattrek.com/online-calculator/hypergeometric"
+          target="_blank"
+          rel="noopener"
+        >
+          geometrischen Taschenrechner
+        </a>. Damit analysiere ich z. B. die Erfolgswahrscheinlichkeit
+        bestimmter Kartenkombinationen oder die optimale Verteilung von
+        Ressourcen.
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="meine-reise">
+      <h2 id="meine-reise">Meine Reise durch die Welt der TCGs</h2>
+      <p>
+        Jedes der Spiele, die ich vorstelle, hat mich auf seine eigene Weise
+        geprägt:
+      </p>
+      <ul class="text-list">
+        <li>
+          <a href="/ygo/">Yu-Gi-Oh!</a>: Mein erster Kontakt mit der Welt der
+          TCGs. Die Anime-Serie weckte meine Neugier, und schnell war ich von
+          den taktischen Möglichkeiten und der Vielfalt der Karten fasziniert.
+          Yu-Gi-Oh! hat mir beigebracht, wie wichtig es ist, Kombos zu erkennen
+          und den Gegner mit präzisen Zügen zu überlisten.
+        </li>
+        <li>
+          <a href="/lor/">Legends of Runeterra</a>: Ein digitales TCG, das mich
+          durch sein rundesbasiertes System und die tiefe Integration in das
+          Runeterra-Universum überzeugt hat. LoR hat mir gezeigt, wie ein TCG
+          dynamisch und interaktiv sein kann. Ohne physische Karten, aber mit
+          mindestens genauso viel Strategie.
+        </li>
+        <li>
+          <a href="/mtg/">Magic: The Gathering</a>: Mein aktuelles Hauptspiel
+          und eine endlose Quelle der Inspiration. MTG bietet eine
+          unübertroffene Tiefe im Deckbuilding und Spielmechaniken.
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="was-dich-erwartet">
+      <h2 id="was-dich-erwartet">Was dich auf dieser Seite erwartet</h2>
+      <p>
+        Auf den folgenden Seiten erfährst du mehr über meine Lieblingsspiele und
+        meinen Lieblingsdecks.
+      </p>
+      <ul class="text-list">
+        <li>
+          <a href="/ygo/">Yu-Gi-Oh!</a>: Eine Hommage an mein erstes TCG, mit
+          einem Blick auf die Mechaniken, die mich bis heute begeistern.
+        </li>
+        <li>
+          <a href="/lor/">Legends of Runeterra</a>: Warum LoR für mich ein
+          einzigartiges digitales Erlebnis ist.
+        </li>
+        <li>
+          <a href="/mtg/">Magic: The Gathering</a>: Meine aktuelle Leidenschaft
+          und die unendlichen Möglichkeiten, die MTG bietet.
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="die-drei-spielwelten">
+      <h2 id="die-drei-spielwelten">Die drei Spielwelten</h2>
+      <ul class="game-grid" aria-label="TCG-Auswahl">
+        <li>
+          <a href="/ygo/">
+            <img
+              src={ygoLogo.src}
+              width="1274"
+              height="446"
+              alt="Yu-Gi-Oh! Logo"
+            />
+            <span>Yu-Gi-Oh!</span>
+          </a>
+        </li>
+        <li>
+          <a href="/lor/">
+            <img
+              src={lorLogo.src}
+              width="400"
+              height="225"
+              alt="Legends of Runeterra Logo"
+            />
+            <span>Legends of Runeterra</span>
+          </a>
+        </li>
+        <li>
+          <a href="/mtg/">
+            <img
+              src={mtgLogo.src}
+              width="768"
+              height="499"
+              alt="Magic: The Gathering Logo"
+            />
+            <span>Magic: The Gathering</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+const navigation = [
+  { href: "/", label: "Startseite" },
+  { href: "/ygo/", label: "Yu-Gi-Oh!" },
+  { href: "/lor/", label: "Legends of Runeterra" },
+  { href: "/mtg/", label: "Magic: The Gathering" },
+  { href: "/legal/", label: "Impressum" },
+];
+
+const currentPath = Astro.url.pathname;
+const decklistNavigation = {
+  "/ygo-decklist/": "/ygo/",
+  "/lor-decklist/": "/lor/",
+  "/mtg-decklist/": "/mtg/",
+};
+const activePath =
+  decklistNavigation[currentPath as keyof typeof decklistNavigation] ??
+  currentPath;
+---
+
+<header class="site-header">
+  <a class="site-logo" href="/" aria-label="Zur Startseite">
+    <img src="/img/tcg_icon.webp" width="512" height="512" alt="TCG Icon" />
+  </a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <ul>
+      {
+        navigation.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={item.href === activePath ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
