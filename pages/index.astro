@@ -1,8 +1,7 @@
----
+﻿---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ygoLogo from "../img/ygo/ygo_logo.webp";
-import lorLogo from "../img/lor/lor_logo.webp";
-import mtgLogo from "../img/mtg/mtg_logo.webp";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="TCG Übersicht - Startseite">
@@ -69,21 +68,21 @@ import mtgLogo from "../img/mtg/mtg_logo.webp";
       </p>
       <ul class="text-list">
         <li>
-          <a href="/ygo/">Yu-Gi-Oh!</a>: Mein erster Kontakt mit der Welt der
+          <a href={`${base}ygo/`}>Yu-Gi-Oh!</a>: Mein erster Kontakt mit der Welt der
           TCGs. Die Anime-Serie weckte meine Neugier, und schnell war ich von
           den taktischen Möglichkeiten und der Vielfalt der Karten fasziniert.
           Yu-Gi-Oh! hat mir beigebracht, wie wichtig es ist, Kombos zu erkennen
           und den Gegner mit präzisen Zügen zu überlisten.
         </li>
         <li>
-          <a href="/lor/">Legends of Runeterra</a>: Ein digitales TCG, das mich
+          <a href={`${base}lor/`}>Legends of Runeterra</a>: Ein digitales TCG, das mich
           durch sein rundesbasiertes System und die tiefe Integration in das
           Runeterra-Universum überzeugt hat. LoR hat mir gezeigt, wie ein TCG
           dynamisch und interaktiv sein kann. Ohne physische Karten, aber mit
           mindestens genauso viel Strategie.
         </li>
         <li>
-          <a href="/mtg/">Magic: The Gathering</a>: Mein aktuelles Hauptspiel
+          <a href={`${base}mtg/`}>Magic: The Gathering</a>: Mein aktuelles Hauptspiel
           und eine endlose Quelle der Inspiration. MTG bietet eine
           unübertroffene Tiefe im Deckbuilding und Spielmechaniken.
         </li>
@@ -98,15 +97,15 @@ import mtgLogo from "../img/mtg/mtg_logo.webp";
       </p>
       <ul class="text-list">
         <li>
-          <a href="/ygo/">Yu-Gi-Oh!</a>: Eine Hommage an mein erstes TCG, mit
+          <a href={`${base}ygo/`}>Yu-Gi-Oh!</a>: Eine Hommage an mein erstes TCG, mit
           einem Blick auf die Mechaniken, die mich bis heute begeistern.
         </li>
         <li>
-          <a href="/lor/">Legends of Runeterra</a>: Warum LoR für mich ein
+          <a href={`${base}lor/`}>Legends of Runeterra</a>: Warum LoR für mich ein
           einzigartiges digitales Erlebnis ist.
         </li>
         <li>
-          <a href="/mtg/">Magic: The Gathering</a>: Meine aktuelle Leidenschaft
+          <a href={`${base}mtg/`}>Magic: The Gathering</a>: Meine aktuelle Leidenschaft
           und die unendlichen Möglichkeiten, die MTG bietet.
         </li>
       </ul>
@@ -116,9 +115,9 @@ import mtgLogo from "../img/mtg/mtg_logo.webp";
       <h2 id="die-drei-spielwelten">Die drei Spielwelten</h2>
       <ul class="game-grid" aria-label="TCG-Auswahl">
         <li>
-          <a href="/ygo/">
+          <a href={`${base}ygo/`}>
             <img
-              src={ygoLogo.src}
+              src={`${base}img/ygo/ygo_logo.webp`}
               width="1274"
               height="446"
               alt="Yu-Gi-Oh! Logo"
@@ -127,9 +126,9 @@ import mtgLogo from "../img/mtg/mtg_logo.webp";
           </a>
         </li>
         <li>
-          <a href="/lor/">
+          <a href={`${base}lor/`}>
             <img
-              src={lorLogo.src}
+              src={`${base}img/lor/lor_logo.webp`}
               width="400"
               height="225"
               alt="Legends of Runeterra Logo"
@@ -138,9 +137,9 @@ import mtgLogo from "../img/mtg/mtg_logo.webp";
           </a>
         </li>
         <li>
-          <a href="/mtg/">
+          <a href={`${base}mtg/`}>
             <img
-              src={mtgLogo.src}
+              src={`${base}img/mtg/mtg_logo.webp`}
               width="768"
               height="499"
               alt="Magic: The Gathering Logo"

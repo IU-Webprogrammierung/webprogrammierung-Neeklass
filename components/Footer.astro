@@ -1,6 +1,10 @@
+﻿---
+const base = import.meta.env.BASE_URL;
+---
+
 <footer class="site-footer">
   <nav aria-label="Footer-Navigation">
-    <a href="/">Zurück zur Startseite</a>
-    <a href="/legal/">Impressum</a>
+    <a href={base}>Zurück zur Startseite</a>
+    <a href={`${base}legal/`}>Impressum</a>
   </nav>
 </footer>

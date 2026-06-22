@@ -1,5 +1,7 @@
----
+﻿---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Yu-Gi-Oh!">
@@ -62,7 +64,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="content-section" aria-labelledby="deckliste">
       <h2 id="deckliste">Deckliste</h2>
       <p>
-        <a href="/ygo-decklist/">Zur Yu-Gi-Oh!-Deckliste</a>
+        <a href={`${base}ygo-decklist/`}>Zur Yu-Gi-Oh!-Deckliste</a>
       </p>
     </section>
   </section>
