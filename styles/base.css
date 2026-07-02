@@ -5,6 +5,7 @@
   --color-border: #cadbd3;
   --color-accent: #2f7d68;
   --color-accent-dark: #22594a;
+  --color-focus: #b45309;
 }
 
 * {
@@ -24,11 +25,36 @@ a {
 }
 
 a:focus-visible {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 3px;
+  border-radius: 0.25rem;
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  transform: translateY(-150%);
+  padding: 0.75rem 1rem;
+  background: var(--color-text);
+  color: var(--color-surface);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease;
+
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
 }

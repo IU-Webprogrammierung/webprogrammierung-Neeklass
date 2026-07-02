@@ -16,8 +16,9 @@ const { title = "TCG Website" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
     <Header />
-    <main class="page-content" aria-label="Seiteninhalt">
+    <main id="main-content" class="page-content">
       <slot />
     </main>
     <Footer />
