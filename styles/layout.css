@@ -21,8 +21,10 @@
   padding-left: 1.25rem;
 }
 
-.text-list li+li {
-  margin-top: 1rem;
+.text-list {
+  li + li {
+    margin-top: 1rem;
+  }
 }
 
 .game-grid {
@@ -31,39 +33,39 @@
   grid-template-columns: 1fr;
   margin: 1.5rem 0 0;
   padding: 0;
-}
 
-.game-grid li {
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 
-.game-grid a {
-  display: flex;
-  min-height: 9rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 1rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  text-align: center;
-  text-decoration: none;
-}
+  a {
+    display: flex;
+    min-height: 9rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    text-align: center;
+    text-decoration: none;
 
-.game-grid a:hover {
-  border-color: var(--color-accent);
-}
+    &:hover {
+      border-color: var(--color-accent);
+    }
+  }
 
-.game-grid img {
-  max-height: 5rem;
-  object-fit: contain;
-}
+  img {
+    max-height: 5rem;
+    object-fit: contain;
+  }
 
-.game-grid span {
-  color: var(--color-accent-dark);
-  font-weight: 700;
+  span {
+    color: var(--color-accent-dark);
+    font-weight: 700;
+  }
 }
 
 .deck-grid {
@@ -73,19 +75,19 @@
   margin-top: 1.5rem;
   padding: 0;
   list-style: none;
-}
 
-.deck-grid li {
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 
-.deck-grid figure {
-  margin: 0;
-}
+  figure {
+    margin: 0;
+  }
 
-.deck-grid img {
-  width: 100%;
-  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) {
