@@ -71,6 +71,12 @@
   grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.deck-grid li {
+  list-style: none;
 }
 
 .deck-grid figure {
