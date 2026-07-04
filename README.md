@@ -25,37 +25,59 @@ Dadurch verwendet Astro das Repository-Root als Quellverzeichnis, statt wie übl
 
 # Struktur
 
-- `pages/index.astro`: Startseite mit Einführung zu TCGs und Navigation zu den drei Spielwelten
-- `pages/ygo.astro`, `pages/lor.astro`, `pages/mtg.astro`: Inhaltsseiten zu den einzelnen Spielen
-- `pages/*-decklist.astro`: Bildbasierte Decklisten
-- `components/Header.astro`: Hauptnavigation mit aktivem Navigationszustand
-- `components/Footer.astro`: Footer-Navigation
-- `styles/base.css`, `styles/components.css`, `styles/layout.css`: Farbvariablen, Grundlayout, Navigation, Kartenraster und responsive Decklisten
-- `pages/legal.astro`: Impressum, Marken-/Bildhinweise, Haftungsausschluss und Datenschutztext
+- `pages/`: alle Seiten der Website, u. a. `index.astro` (Startseite), `ygo.astro`, `lor.astro`, `mtg.astro` (Inhaltsseiten je Spiel), `*-decklist.astro` (Decklisten), `legal.astro` (Impressum) und `404.astro` (Fehlerseite)
+- `components/`: wiederverwendbare Bausteine, u. a. `Header.astro` (Hauptnavigation) und `Footer.astro` (Footer-Navigation)
+- `layouts/`: `BaseLayout.astro` als gemeinsames Seitengerüst (Kopf-/Fußbereich, eingebundene Styles)
+- `styles/`: `base.css`, `components.css`, `layout.css` für Farbvariablen, Grundlayout, Navigation und Kartenraster
+- `public/img/`: Bilder und Logos der Website
+- `public/js/`: Kleine, eigenständige JavaScript-Dateien (z. B. für den Theme-Umschalter)
+- `astro.config.mjs`: zentrale Astro-Konfiguration (`srcDir`, `base`)
 
 # Barrierefreiheit
 
-Bei der Umsetzung des Projekts wurde sich an die Richtlinien von W3C orientiert.
+Bei der Umsetzung wurde auf semantisches HTML, aussagekräftige Alt-Texte, sichtbare Fokuszustände, einen Skip-Link zum Hauptinhalt sowie durchgängige Tastaturbedienbarkeit geachtet.
+Als grobe Orientierung dienten die Richtlinien von W3C.
 ([Web Content Accessibility Guidelines - WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/))
 
-# Entwicklung
+# Entwicklung / Lokale Ausführung
 
-In `package.json` sind drei Skripte definiert:
+Alle folgenden Befehle werden im Repository-Root ausgeführt, also in dem Ordner, in dem auch `package.json` liegt. Es ist kein Wechsel in einen Unterordner nötig.
 
-```json
-{
-  "dev": "astro dev",
-  "build": "astro build",
-  "preview": "astro preview"
-}
+Voraussetzung ist eine installierte Node.js-Version mit npm.
+
+## Installation
+
+```bash
+npm install
 ```
 
-Skripte:
+Installiert alle Abhängigkeiten (u. a. Astro) gemäß `package.json`.
 
-- `npm run dev`: startet den lokalen Entwicklungsserver
-- `npm run build`: erzeugt den statischen Produktionsbuild
-- `npm run preview`: zeigt den gebauten Stand lokal an
+## Entwicklungsserver
 
+```bash
+npm run dev
+```
+
+Startet den lokalen Entwicklungsserver mit Hot-Reload. Die URL wird im Terminal ausgegeben.
+
+Da in `astro.config.mjs` `base: "/webprogrammierung-Neeklass"` gesetzt ist, ist die Seite nicht direkt unter `http://localhost:4321/`, sondern unter `http://localhost:4321/webprogrammierung-Neeklass/` erreichbar.
+
+## Produktionsbuild
+
+```bash
+npm run build
+```
+
+Erzeugt den statischen Produktionsbuild im Ordner `dist/`.
+
+## Preview des Builds
+
+```bash
+npm run preview
+```
+
+Zeigt den zuvor erzeugten Produktionsbuild lokal an (ebenfalls unter dem Pfad `/webprogrammierung-Neeklass/`).
 
 # Sonstiges
 
