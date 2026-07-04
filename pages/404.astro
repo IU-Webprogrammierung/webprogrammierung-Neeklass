@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout title="Seite nicht gefunden">
+  <section class="home-intro" aria-labelledby="seite-nicht-gefunden">
+    <h1 id="seite-nicht-gefunden">Seite nicht gefunden</h1>
+    <p>Diese Seite existiert leider nicht oder wurde verschoben.</p>
+    <p><a href={base}>Zurück zur Startseite</a></p>
+  </section>
+</BaseLayout>
