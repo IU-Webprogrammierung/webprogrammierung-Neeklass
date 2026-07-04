@@ -65,6 +65,43 @@
   }
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-self: flex-start;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-text);
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent-dark);
+  }
+
+  &:focus-visible {
+    border-radius: 0.5rem;
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  &[aria-pressed="true"] {
+    background: var(--color-accent);
+    border-color: var(--color-accent-dark);
+    color: var(--color-surface);
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--color-border);
   border-bottom: 0;
@@ -105,5 +142,9 @@
     a {
       transition: none;
     }
+  }
+
+  .theme-toggle {
+    transition: none;
   }
 }

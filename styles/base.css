@@ -8,6 +8,16 @@
   --color-focus: #b45309;
 }
 
+html[data-theme="dark"] {
+  --color-background: #10201b;
+  --color-surface: #16281f;
+  --color-text: #ecf5f0;
+  --color-border: #3a5347;
+  --color-accent: #5fcba0;
+  --color-accent-dark: #8fe0bf;
+  --color-focus: #ffb648;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,6 +28,15 @@ body {
   color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 a {

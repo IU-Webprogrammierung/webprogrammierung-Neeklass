@@ -51,9 +51,16 @@
     color: var(--color-text);
     text-align: center;
     text-decoration: none;
+    transition:
+      border-color 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       border-color: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.12);
     }
   }
 
@@ -78,6 +85,11 @@
 
   li {
     list-style: none;
+    transition: box-shadow 160ms ease;
+
+    &:hover {
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    }
   }
 
   figure {
@@ -87,6 +99,21 @@
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-grid a {
+    transition: none;
+
+    &:hover,
+    &:focus-within {
+      transform: none;
+    }
+  }
+
+  .deck-grid li {
+    transition: none;
   }
 }
 
